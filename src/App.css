@@ -6,6 +6,9 @@
   height: 40vmin;
   pointer-events: none;
 }
+.blank {
+  color: rgb(155, 84, 84);
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -35,4 +38,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+#mybox {
+  height: 150px;
 }
