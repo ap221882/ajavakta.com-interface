@@ -26,10 +26,7 @@ export default function Textform(props) {
     setText(event.target.value);
   };
   const handleCopy = () => {
-    let text = document.getElementById("mybox");
-    text.select();
-    text.setSelectionRange(0, 9999);
-    navigator.clipboard.writeText(text.value);
+    navigator.clipboard.writeText(text);
     props.showAlert("Copied to clipboard", "success");
   };
 
@@ -106,7 +103,7 @@ export default function Textform(props) {
         </p>
         <p>
           {0.008 *
-            text.split(" ").filter((element) => {
+            text.split(/s+/).filter((element) => {
               return element.length !== 0;
             }).length}{" "}
           minutes read.
